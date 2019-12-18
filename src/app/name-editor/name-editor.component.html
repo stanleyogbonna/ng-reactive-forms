@@ -1,0 +1,9 @@
+<h2>Single form control</h2>
+<label>
+  Name:
+  <input type="text" [formControl]="name">
+</label>
+<p>
+  Value: {{name.value}}
+</p>
+<button class="btn" (click)="updateName()">Update Name</button>

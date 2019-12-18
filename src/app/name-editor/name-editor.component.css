@@ -1,0 +1,31 @@
+input[type=text] {
+  display: block;
+  padding: 5px;
+  font-size: 20px;
+}
+label:first-child {
+  color: #9e9999;
+  font-weight: bold;
+  font-size: 20px;
+}
+button {
+  background-color: #f1ecec;
+  color: #5a5858;
+  font-size: 15px;
+  padding: 7px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+button:hover,
+button:active {
+  background-color: #c5c0c0;
+  color: #302f2f;
+  cursor: pointer;
+}
+p{
+  color: #9e9999;
+}
+h2 {
+  color: #3b3a3a;
+}
