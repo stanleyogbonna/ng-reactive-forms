@@ -1,9 +1,52 @@
-<h2>Single form control</h2>
-<label>
-  Name:
-  <input type="text" [formControl]="name">
-</label>
-<p>
-  Value: {{name.value}}
-</p>
-<button class="btn" (click)="updateName()">Update Name</button>
+<div class="container">
+  <h2>Cross field validation</h2>
+<form [formGroup]="heroForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="name">
+      Name:
+      <input type="text" class="form-control" formControlName="name" required>
+    </label>
+  </div>
+  <div *ngIf="heroName.errors?.required && (heroName.touched || heroName.dirty)"
+    class="alert alert-danger">
+    Name is required
+  </div>
+  <div>
+    <label for="alterEgo">
+      alterEgo:
+      <input type="text" class="form-control" formControlName="alterEgo" required>
+    </label>
+  </div>
+  <div *ngIf="heroAlterEgo.errors?.required && (heroAlterEgo.touched || heroAlterEgo.dirty)"
+    class="alert alert-danger">
+    AlterEgo is required
+  </div>
+  <div *ngIf="heroForm.errors?.identityRevealed && (heroForm.touched || heroForm.dirty)"
+    class="cross-validation-error-message alert alert-danger">
+    Name cannot match alter ego.
+  </div>
+  <div>
+    <label for="power">Hero Power</label>
+    <select class="form-control" id="power" name="power" formControlName="power" required>
+      <option *ngFor="let pow of powers" [value]="pow">{{pow}}</option>
+    </select>
+    <button type="submit" id="btn" class="btn" [disabled]="heroForm.invalid">Submit</button>
+  </div>
+
+</form>
+<p>Status: {{heroForm.status}}</p>
+<div *ngIf="false">
+  <h2>Single form control</h2>
+  <label>
+    Name:
+    <input type="text" [formControl]="name">
+  </label>
+  <p>
+    Value: {{name.value}}
+  </p>
+  <button class="btn" (click)="updateName()">Update Name</button>
+</div>
+
+
+
+</div>

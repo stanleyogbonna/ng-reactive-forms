@@ -1,5 +1,5 @@
-form {
-  margin-top: 3s0px;
+/* form {
+  margin-top: 30px;
 }
 input[type=text] {
   display: block;
@@ -39,4 +39,8 @@ h3{
 h2 {
   color: #3b3a3a;
   margin-top: 40px;
+} */
+
+#btn {
+  margin-top: 10px;
 }
