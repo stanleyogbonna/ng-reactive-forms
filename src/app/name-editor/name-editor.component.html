@@ -1,7 +1,7 @@
 <div class="container">
   <h2>Cross field validation</h2>
 <form [formGroup]="heroForm" (ngSubmit)="onSubmit()">
-  <div>
+  <div class="form-group">
     <label for="name">
       Name:
       <input type="text" class="form-control" formControlName="name" required>
@@ -35,7 +35,7 @@
 
 </form>
 <p>Status: {{heroForm.status}}</p>
-<div *ngIf="false">
+<div *ngIf="true">
   <h2>Single form control</h2>
   <label>
     Name:

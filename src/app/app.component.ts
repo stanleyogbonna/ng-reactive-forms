@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 
-export type EditorType = 'validation' | 'group';
+export type EditorType = 'validation' | 'group' | 'login';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -20,6 +20,9 @@ export class AppComponent {
   }
   get showGroup() {
     return this.editor === 'group';
+  }
+  get showLogin() {
+    return this.editor === 'login';
   }
 
 }

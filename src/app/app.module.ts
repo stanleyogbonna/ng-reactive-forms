@@ -7,6 +7,7 @@ import { NameEditorComponent } from './name-editor/name-editor.component';
 import { ProfileEditorComponent } from './profile-editor/profile-editor.component';
 import { ForbiddenNameDirective } from './shared/forbidden-name.directive';
 import { IdentityRevealedDirective } from './shared/identity-revealed.directive';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { IdentityRevealedDirective } from './shared/identity-revealed.directive'
     ProfileEditorComponent,
     ForbiddenNameDirective,
     IdentityRevealedDirective,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

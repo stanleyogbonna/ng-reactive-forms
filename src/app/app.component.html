@@ -2,8 +2,10 @@
   <nav>
     <a (click)="toggleEditor('validation')">Cross field validation</a>
     <a (click)="toggleEditor('group')">Grouping form controls</a>
+    <a (click)="toggleEditor('login')">Login form</a>
   </nav>
   <app-name-editor *ngIf="showValidation"></app-name-editor>
   <app-profile-editor *ngIf="showGroup"></app-profile-editor>
+  <login-editor *ngIf="showLogin"></login-editor>
 </div>
 
